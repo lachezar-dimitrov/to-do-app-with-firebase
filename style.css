@@ -99,7 +99,7 @@ input{
 button.clicked{
   background-color: rgb(60, 67, 154);
   border-color: rgb(60, 67, 154);
-  color: white;
+  color: red;
   outline-color: rgb(60, 67, 154);
 }
 
