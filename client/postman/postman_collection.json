@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "8f7ff9bc-e211-463d-a215-5fdf104e62cc",
+		"name": "Part 1 - Nest Fundamentals, REST, CORS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. GET /todos - Success",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. POST /todos - Success",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"name\": \"Learn REST\",\r\n    \"due\": \"2019-09-10\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. POST /todos - Invalid Todo Name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"due\": \"2019-09-10\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. POST /todos - Invalid Todo Due",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"name\": \"Learn REST\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. PUT /todos/:id - Success",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"new name\",\r\n\t\"due\": \"2019-09-11\",\r\n    \"isDone\": true\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/todos/0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. PUT /todos/:id - Not Found",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isDone\": true\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/todos/-1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos",
+						"-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. DELETE /todos/:id - Success",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/todos/0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. DELETE /todos/:id - Not Found",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/todos/-1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos",
+						"-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. GET / - Success",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. GET /todos?name=... - Success",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/todos?name=learn",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "learn"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
