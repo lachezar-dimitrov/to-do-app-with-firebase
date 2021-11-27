@@ -1,0 +1,89 @@
+h2 {
+  border-bottom: 1px solid #565656;
+}
+
+#main {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#todo-text {
+  width: 300px;
+}
+
+#main > input {
+  outline: 0;
+  height: 20px;
+  padding: 3px;
+}
+
+#main > button {
+  height: 30px;
+  margin-left: 15px;
+  padding: 3px 20px;
+  border: 0;
+  outline: 0;
+}
+
+#main > button {
+  height: 30px;
+  margin-left: 15px;
+  padding: 3px 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  outline: 0;
+}
+
+#main > button:hover {
+  cursor: pointer;
+  background-color: #ff2222;
+  color: #fff;
+}
+
+#main > button:active {
+  background-color: #aaa;
+}
+
+#todos {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#todos > div {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #575757aa;
+}
+
+#todos > div > input {
+  float: left;
+  margin-right: 10px;
+}
+
+#todos > div > input:checked ~ span {
+  text-decoration: line-through;
+  color: #575757aa;
+}
+
+#todos > div > span.todo-done {
+  text-decoration: line-through;
+  color: #575757aa;
+}
+
+#todos > div > button {
+  float: right;
+  padding: 2px 6px;
+  border: 0;
+  outline: 0;
+}
+
+#todos > div > button:hover {
+  color: #fff;
+  background-color: #ff2222;
+  cursor: pointer;
+}
+
+#todos > div > button:active {
+  background-color: #bb2222;
+}
