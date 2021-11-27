@@ -1,0 +1,25 @@
+.create-todo-form {
+  background-color: #d4aa35;
+  display: grid;
+  grid-template-columns: auto;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  padding: 25px;
+  margin: 5px;
+}
+
+.create-todo-from div {
+  margin: 3%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.create-todo-from button {
+  width: 90%;
+  background-color: violet;
+  cursor: pointer;
+}
+.create-todo-form > label {
+  min-width: 90px;
+  display: inline-block;
+}
